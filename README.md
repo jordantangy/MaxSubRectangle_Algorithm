@@ -2,7 +2,7 @@
 
 
 To run the code, create a main function.
-You input should be a matrix of length 3 : 
+Your input should be a matrix of length 3 : 
 First column for i, second for j and third for value.
 Example of input : 
 
