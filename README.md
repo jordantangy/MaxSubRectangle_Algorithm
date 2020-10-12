@@ -4,14 +4,14 @@ The idea behind this project is as follows :
 - Given a two dimensional array , we are looking to go through this array and with the minimum time complexity, we want to 
 locate the Maximum Sub Rectangle of that specific matrix:
 For example, let's look at the matrix :
-[0,1,2,3]
-[0,0,5,3]
-[0,1,2,4]
+{{0,1,2,3},
+ {0,0,5,3},
+ {0,1,2,4}}
 
 So , when running this code, we will find that the Max Sub-Reactangle is this matrix is :
-[2,3]
-[5,3]
-[2,4] , because when we sum up those digits, we can see that this is the highest values that forms a subrectangle of this given Matrix
+{{2,3},
+ {5,3},
+ {2,4}} , because when we sum up those digits, we can see that this is the highest values that forms a subrectangle of this given Matrix
 
 And all this with a minimum time complexity.
 
