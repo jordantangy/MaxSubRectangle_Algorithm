@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//336208657
 public class MaxSubRectangle {
 
 	int mat [][];
@@ -35,9 +35,19 @@ public class MaxSubRectangle {
 	public MaxSubRectangle(int mat[][]){
 		int i = 0;
 		int j = 0;
-		int r = mat[mat.length-1][0]+1;
-		int c = mat[mat.length-1][1]+1;
-		int arr[][]= new int[r][c];
+		int r = 0;
+		int c = 0;
+		int tempr,tempc = 0;
+		for (int k = 0; k < mat.length; k++) {
+			tempr = mat[k][0];
+			if(tempr > r) {
+				r = tempr;
+			}
+			tempc = mat[k][1];
+			if(tempc > c)
+			c = tempc;
+		}
+		int arr[][]= new int[r+1][c+1];
 		for (int k = 0; k < arr.length; k++) {
 			for (int k2 = 0; k2 < arr[i].length; k2++) {
 				arr[k][k2] = minus_infinity;
@@ -107,6 +117,82 @@ public class MaxSubRectangle {
 			return  maxSum;
 		}
 		return minSum;
+	}
+	public static void main(String[] args) { 
+//		int[][] mat = {
+//				{0,3,1},
+//				 {1,2,1},
+//				 {1,3,2},
+//				 {1,4,-4},
+//				 {2,1,2},
+//				 {2,2,-3},
+//				 {2,3,3},
+//				 {2,4,3},
+//				 {2,5,1},
+//				 {3,0,-2},
+//				 {3,1,10},
+//				 {3,2,9},
+//				 {3,3,-2},
+//				 {3,4,4},
+//				 {3,5,5},
+//				 {3,6,-11}
+//
+//		};
+		
+		int mat[][] = {{0, 1, -24},
+				{0, 9, 3},
+				{0, 14, -50}, 
+				{1, 0, -57}, 
+				{1, 2, -11}, 
+				{1, 4, -31}, 
+				{1, 12, 20},
+				{2, 2, -86}, 
+				{2, 5, -95}, 
+				{2, 7, -16},
+				{2, 8, 47}, 
+				{2, 10, 31},
+				{3, 3, 41}, 
+				{3, 6, -74}, 
+				{3, 8, 4},
+				{3, 13, -86},
+				{4, 5, 17}, 
+				{4, 7, -4},
+				{4, 11, -27},
+				{4, 14, -26}, 
+				{5, 1, -17}, 
+				{5, 3, 86}, 
+				{5, 4, -17},
+				{5, 6, -99},
+				{5, 11, 85}, 
+				{6, 0, 59}, 
+				{6, 3, -52}, 
+				{6, 6, 19},
+				{6, 7, 22}, 
+				{6, 10, -19}, 
+				{6, 11, -11},
+				{7, 3, 67}, 
+				{7, 5, -17}, 
+				{7, 10, -3}, 
+				{8, 1, -95}, 
+				{8, 4, -81}, 
+				{8, 5, -65}, 
+				{8, 8, -41}, 
+				{8, 9, 93},
+				{8, 10, 14}, 
+				{8, 12, -94},
+				{8, 13, 68}, 
+				{8, 14, -33},
+				{9, 5, 83}, 
+				{9, 10, -24},
+				{9, 12, -56}, 
+				{9, 13, 92}
+		
+		
+		};
+		MaxSubRectangle a = new MaxSubRectangle(mat);
+		System.out.println(a.getMaxSum());
+		System.out.println(a.getILeft()+","+a.getJLeft());
+		System.out.println(a.getIRight()+","+a.getJRight());
 	}
 
 }
