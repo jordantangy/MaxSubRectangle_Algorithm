@@ -1,4 +1,4 @@
-# Algorithms2_MaxSubRectangle
+# MaxSubRectangle_Algorithm
 
 The idea behind this project is as follows : 
 - Given a two dimensional array , we are looking to go through this array and with the minimum time complexity, we want to 
